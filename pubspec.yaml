@@ -1,0 +1,20 @@
+name: wallet_connect
+description: Wallet Connect client made in love with dart.
+version: 1.0.2
+homepage: https://github.com/Orange-Wallet/wallet-connect-dart
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  hex: 0.1.2
+  web_socket_channel: 1.1.0
+  uuid: 2.2.2
+  http: 0.12.2
+  cryptography: 1.4.1
+  collection: 1.15.0-nullsafety.3
+  json_annotation: 3.1.1
+
+dev_dependencies:
+  build_runner: 1.10.2
+  json_serializable: 3.5.1
