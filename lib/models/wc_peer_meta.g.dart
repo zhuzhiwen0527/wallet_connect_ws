@@ -15,7 +15,8 @@ WCPeerMeta _$WCPeerMetaFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$WCPeerMetaToJson(WCPeerMeta instance) => <String, dynamic>{
+Map<String, dynamic> _$WCPeerMetaToJson(WCPeerMeta instance) =>
+    <String, dynamic>{
       'name': instance.name,
       'url': instance.url,
       'description': instance.description,

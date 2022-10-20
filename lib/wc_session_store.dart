@@ -1,7 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import './models/session/wc_session.dart';
-import './models/wc_peer_meta.dart';
+import 'package:wallet_connect/models/session/wc_session.dart';
+import 'package:wallet_connect/models/wc_peer_meta.dart';
 
 part 'wc_session_store.g.dart';
 
@@ -14,15 +14,16 @@ class WCSessionStore {
   final String peerId;
   final String remotePeerId;
   WCSessionStore({
-    this.session,
-    this.peerMeta,
-    this.remotePeerMeta,
-    this.chainId,
-    this.peerId,
-    this.remotePeerId,
+    required this.session,
+    required this.peerMeta,
+    required this.remotePeerMeta,
+    required this.chainId,
+    required this.peerId,
+    required this.remotePeerId,
   });
 
-  factory WCSessionStore.fromJson(Map<String, dynamic> json) => _$WCSessionStoreFromJson(json);
+  factory WCSessionStore.fromJson(Map<String, dynamic> json) =>
+      _$WCSessionStoreFromJson(json);
   Map<String, dynamic> toJson() => _$WCSessionStoreToJson(this);
 
   @override

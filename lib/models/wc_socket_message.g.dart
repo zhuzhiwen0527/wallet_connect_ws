@@ -14,7 +14,8 @@ WCSocketMessage _$WCSocketMessageFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$WCSocketMessageToJson(WCSocketMessage instance) => <String, dynamic>{
+Map<String, dynamic> _$WCSocketMessageToJson(WCSocketMessage instance) =>
+    <String, dynamic>{
       'topic': instance.topic,
       'type': _$MessageTypeEnumMap[instance.type],
       'payload': instance.payload,
@@ -22,8 +23,8 @@ Map<String, dynamic> _$WCSocketMessageToJson(WCSocketMessage instance) => <Strin
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
-  Object source, {
-  K unknownValue,
+  Object? source, {
+  K? unknownValue,
 }) {
   if (source == null) {
     throw ArgumentError(

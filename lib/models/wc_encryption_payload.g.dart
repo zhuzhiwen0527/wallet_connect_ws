@@ -14,7 +14,9 @@ WCEncryptionPayload _$WCEncryptionPayloadFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$WCEncryptionPayloadToJson(WCEncryptionPayload instance) => <String, dynamic>{
+Map<String, dynamic> _$WCEncryptionPayloadToJson(
+        WCEncryptionPayload instance) =>
+    <String, dynamic>{
       'data': instance.data,
       'hmac': instance.hmac,
       'iv': instance.iv,

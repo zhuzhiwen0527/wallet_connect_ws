@@ -4,11 +4,11 @@ class WCEthereumSignMessage {
   final List<String> raw;
   final WCSignType type;
   WCEthereumSignMessage({
-    this.raw,
-    this.type,
+    required this.raw,
+    required this.type,
   });
 
-  String get data {
+  String? get data {
     switch (type) {
       case WCSignType.MESSAGE:
         return raw[1];

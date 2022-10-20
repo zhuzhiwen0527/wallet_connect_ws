@@ -8,12 +8,13 @@ class WCEncryptionPayload {
   final String hmac;
   final String iv;
   WCEncryptionPayload({
-    this.data,
-    this.hmac,
-    this.iv,
+    required this.data,
+    required this.hmac,
+    required this.iv,
   });
 
-  factory WCEncryptionPayload.fromJson(Map<String, dynamic> json) => _$WCEncryptionPayloadFromJson(json);
+  factory WCEncryptionPayload.fromJson(Map<String, dynamic> json) =>
+      _$WCEncryptionPayloadFromJson(json);
 
   Map<String, dynamic> toJson() => _$WCEncryptionPayloadToJson(this);
 

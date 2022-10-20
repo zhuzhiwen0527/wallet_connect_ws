@@ -9,10 +9,10 @@ class WCSession {
   final String bridge;
   final String key;
   WCSession({
-    this.topic,
-    this.version,
-    this.bridge,
-    this.key,
+    required this.topic,
+    required this.version,
+    required this.bridge,
+    required this.key,
   });
 
   String toUri() => "wc:$topic@$version?bridge=$bridge&key=$key";
@@ -36,9 +36,11 @@ class WCSession {
     return WCSession(topic: topic, version: version, bridge: bridge, key: key);
   }
 
-  factory WCSession.empty() => WCSession(topic: '', version: '', bridge: '', key: '');
+  factory WCSession.empty() =>
+      WCSession(topic: '', version: '', bridge: '', key: '');
 
-  factory WCSession.fromJson(Map<String, dynamic> json) => _$WCSessionFromJson(json);
+  factory WCSession.fromJson(Map<String, dynamic> json) =>
+      _$WCSessionFromJson(json);
   Map<String, dynamic> toJson() => _$WCSessionToJson(this);
 
   @override

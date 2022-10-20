@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import '../../utils/constants.dart';
+import 'package:wallet_connect/utils/constants.dart';
 
 part 'json_rpc_response.g.dart';
 
@@ -9,9 +9,9 @@ class JsonRpcResponse<T> {
   final String jsonrpc;
   final T result;
   JsonRpcResponse({
-    this.id,
+    required this.id,
     this.jsonrpc = JSONRPC_VERSION,
-    this.result,
+    required this.result,
   });
 
   factory JsonRpcResponse.fromJson(Map<String, dynamic> json) =>
@@ -19,5 +19,6 @@ class JsonRpcResponse<T> {
   Map<String, dynamic> toJson() => _$JsonRpcResponseToJson(this, (t) => t);
 
   @override
-  String toString() => 'JsonRpcResponse(id: $id, jsonrpc: $jsonrpc, result: $result)';
+  String toString() =>
+      'JsonRpcResponse(id: $id, jsonrpc: $jsonrpc, result: $result)';
 }

@@ -11,11 +11,12 @@ JsonRpcRequest _$JsonRpcRequestFromJson(Map<String, dynamic> json) {
     id: json['id'] as int,
     jsonrpc: json['jsonrpc'] as String,
     method: _$enumDecodeNullable(_$WCMethodEnumMap, json['method']),
-    params: json['params'] as List<dynamic>,
+    params: json['params'] as List<dynamic>?,
   );
 }
 
-Map<String, dynamic> _$JsonRpcRequestToJson(JsonRpcRequest instance) => <String, dynamic>{
+Map<String, dynamic> _$JsonRpcRequestToJson(JsonRpcRequest instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'jsonrpc': instance.jsonrpc,
       'method': _$WCMethodEnumMap[instance.method],
@@ -24,8 +25,8 @@ Map<String, dynamic> _$JsonRpcRequestToJson(JsonRpcRequest instance) => <String,
 
 K _$enumDecode<K, V>(
   Map<K, V> enumValues,
-  Object source, {
-  K unknownValue,
+  Object? source, {
+  K? unknownValue,
 }) {
   if (source == null) {
     throw ArgumentError(
@@ -48,10 +49,10 @@ K _$enumDecode<K, V>(
   ).key;
 }
 
-K _$enumDecodeNullable<K, V>(
+K? _$enumDecodeNullable<K, V>(
   Map<K, V> enumValues,
   dynamic source, {
-  K unknownValue,
+  K? unknownValue,
 }) {
   if (source == null) {
     return null;
@@ -65,9 +66,6 @@ const _$WCMethodEnumMap = {
   WCMethod.ETH_SIGN: 'eth_sign',
   WCMethod.ETH_PERSONAL_SIGN: 'personal_sign',
   WCMethod.ETH_SIGN_TYPE_DATA: 'eth_signTypedData',
-  WCMethod.ETH_SIGN_TYPE_DATA_V1: 'eth_signTypedData_v1',
-  WCMethod.ETH_SIGN_TYPE_DATA_V3: 'eth_signTypedData_v3',
-  WCMethod.ETH_SIGN_TYPE_DATA_V4: 'eth_signTypedData_v4',
   WCMethod.ETH_SIGN_TRANSACTION: 'eth_signTransaction',
   WCMethod.ETH_SEND_TRANSACTION: 'eth_sendTransaction',
 };

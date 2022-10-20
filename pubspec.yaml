@@ -1,20 +1,20 @@
 name: wallet_connect
 description: Wallet Connect client made in love with dart.
-version: 1.0.0
+version: 2.0.0
 homepage: https://github.com/zhuzhiwen0527/wallet_connect_ws
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
-  hex: 0.1.2
-  web_socket_channel: 1.1.0
-  uuid: 2.2.2
-  http: 0.12.2
-  cryptography: 1.4.1
-  collection: 1.15.0-nullsafety.3
-  json_annotation: 3.1.1
+  hex: ^0.2.0
+  web_socket_channel: ^2.2.0
+  uuid: ^3.0.6
+  http: ^0.13.5
+  cryptography: ^2.0.5
+  collection: ^1.16.0
+  json_annotation: ^4.7.0
 
 dev_dependencies:
-  build_runner: 1.10.2
-  json_serializable: 3.5.1
+  build_runner: any
+  json_serializable: any

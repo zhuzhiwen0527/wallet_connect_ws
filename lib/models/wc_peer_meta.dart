@@ -10,13 +10,14 @@ class WCPeerMeta {
   final String description;
   final List<String> icons;
   WCPeerMeta({
-    this.name,
-    this.url,
-    this.description,
+    required this.name,
+    required this.url,
+    required this.description,
     this.icons = const [],
   });
 
-  factory WCPeerMeta.fromJson(Map<String, dynamic> json) => _$WCPeerMetaFromJson(json);
+  factory WCPeerMeta.fromJson(Map<String, dynamic> json) =>
+      _$WCPeerMetaFromJson(json);
 
   Map<String, dynamic> toJson() => _$WCPeerMetaToJson(this);
 

@@ -6,24 +6,25 @@ part 'wc_ethereum_transaction.g.dart';
 class WCEthereumTransaction {
   final String from;
   final String to;
-  final String nonce;
-  final String gasPrice;
-  final String gas;
-  final String gasLimit;
-  final String value;
+  final String? nonce;
+  final String? gasPrice;
+  final String? gas;
+  final String? gasLimit;
+  final String? value;
   final String data;
   WCEthereumTransaction({
-    this.from,
-    this.to,
+    required this.from,
+    required this.to,
     this.nonce,
     this.gasPrice,
-    this.gas,
+    required this.gas,
     this.gasLimit,
     this.value,
-    this.data,
+    required this.data,
   });
 
-  factory WCEthereumTransaction.fromJson(Map<String, dynamic> json) => _$WCEthereumTransactionFromJson(json);
+  factory WCEthereumTransaction.fromJson(Map<String, dynamic> json) =>
+      _$WCEthereumTransactionFromJson(json);
   Map<String, dynamic> toJson() => _$WCEthereumTransactionToJson(this);
 
   @override
